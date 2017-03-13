@@ -1,0 +1,62 @@
+body{
+  background-color: black;
+}
+button{
+  position:relative;
+  top:100px;
+  left:45%;
+  width:200px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: yellow;
+  font-weight: bold;
+}
+#aircraft{
+  position: absolute;
+  top:600px;
+  left:48%;
+height: 100px;
+width:100px;
+}
+
+.rock{
+  background-image: url("images/rock.png");
+  position:relative;
+  top:200px;
+  left:400px;
+  height: 80px;
+  width: 100px;
+  animation: moving 2s linear infinite;
+  animation: spin-left 4s linear infinite;
+}
+
+.stars{
+  background-color: white;
+  top:200px;
+  left:400px;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+}
+
+@keyframes moving{
+  from{top:-200px;}
+  to{bottom:px;}
+}
+
+
+
+@keyframes spin-right {
+  100% {
+   transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-left {
+ from {
+  transform: rotate(360deg);
+}
+ to {
+  transition: rotate(0deg)
+ }
+}
