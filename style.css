@@ -1,62 +1,225 @@
 body{
-  background-color: black;
+  background-image: url("images/space.png");
+  background-size: cover;
 }
-button{
+#screen{
   position:relative;
-  top:100px;
-  left:45%;
+  top:50px;
+  left:40%;
   width:200px;
   height: 20px;
   border-radius: 10px;
-  background-color: yellow;
-  font-weight: bold;
+  background-color: darkred;
+  border:double black;
+  font-size: 100%;
+  padding: 16px;
+  margin: 10px;
+  color:black;
+
+}
+#level{
+   position:relative;
+  top:50px;
+  left:42%;
+  width:200px;
+  height: 20px;
+  background-color:grey;
+}
+input{
+  position:relative;
+  top:60px;
+  left:42%;
+  width:200px;
+  height: 20px;
+  background-color:grey;
+}
+#start{
+  width:200px;
+  height: 20px;
+  background-color: transparent;
+  color:black;
+   font-size: 180%;
+   text-align: center;
+}
+#score{
+ background-color: transparent;
+ position:relative;
+ top:20px;
+ left:80px;
+  width:120px;
+  height: 120px;
+  color:red;
+  text-align: center;
+  font-size: 200%;
+}
+#coin{
+ background-image: url("images/Coin.png");
+ position: relative;
+ top:25%;
+ left:45%;
+ height: 48px;
+ width:15px;
+ animation: blink 0.5s step-start 0s infinite;
+}
+#gem{
+  background-image: url("images/Gem.png");
+ position: relative;
+ top:20%;
+ left:35%;
+ height: 50px;
+ width:32px;
+ animation: blink 0.5s step-start 0s infinite;
+}
+#chestRed{
+  background-image: url("images/ChestRed.png");
+ position: relative;
+ top:20%;
+ left:25%;
+ height: 50px;
+ width:48px;
+ animation: blink 0.6s step-start 0s infinite;
+}
+#chestGreen{
+  background-image: url("images/ChestGreen.png");
+ position: relative;
+ top:20%;
+ left:28%;
+ height: 50px;
+ width:48px;
+ animation: blink 0.5s step-start 0s infinite;
+}
+#chestYellow{
+ background-image: url("images/ChestYellow.png");
+ position: relative;
+ top:20%;
+ left:28%;
+ height: 50px;
+ width:48px;
+ animation: blink 0.4s step-start 0s infinite;
 }
 #aircraft{
   position: absolute;
   top:600px;
   left:48%;
-height: 100px;
-width:100px;
+  height: 50px;
+  width:50px;
 }
 
-.rock{
+#rock1{
   background-image: url("images/rock.png");
-  position:relative;
-  top:200px;
-  left:400px;
   height: 80px;
   width: 100px;
-  animation: moving 2s linear infinite;
-  animation: spin-left 4s linear infinite;
+  position: fixed;
+  margin-top: -380px;
+  margin-left: 140px;
+  transform-origin: 120px 120px;
+  animation: spinLeft 5s linear infinite;
 }
 
-.stars{
-  background-color: white;
+#rock2{
+  background-image: url("images/rock.png");
+  height: 80px;
+  width: 100px;
+  position: fixed;
+  margin-top: -70px;
+  margin-left: 330px;
+  transform-origin: 120px 120px;
+  animation: spinRight 5s linear infinite;
+}
+
+#rock3{
+  background-image: url("images/rock.png");
+  height: 80px;
+  width: 100px;
+  position: fixed;
+  margin-top: -320px;
+  margin-left: 630px;
+  transform-origin: 120px 120px;
+  animation: spinLeft 5s linear infinite;
+}
+
+#rock4{
+
+  background-image: url("images/rock.png");
+  height: 80px;
+  width: 100px;
+  position: relative;
+  margin-top: -475px;
+  margin-left: 925px;
+  transform-origin: 120px 120px;
+  animation: spinRight 5s linear infinite;
+}
+
+#rock5{
+  background-image: url("images/rock.png");
+  height: 80px;
+  width: 100px;
+  position: relative;
+  margin-top: 325px;
+  margin-left: 930px;
+  transform-origin: 120px 120px;
+  animation: spinLeft 5s linear infinite;
+}
+
+
+.planet1{
+  background-image:url("images/earth.png");
+  position:relative;
   top:200px;
+  left:200px;
+  height: 100px;
+  width: 100px;
+
+}
+
+.planet2{
+  background-image: url("images/mars.png");
+  position:relative;
+  top:400px;
   left:400px;
-  height: 2px;
-  width: 2px;
-  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+}
+.planet3{
+  background-image: url("images/purple.png");
+  position:relative;
+  top:300px;
+  left:1000px;
+  height: 100px;
+  width: 100px;
+
+}
+.planet4{
+  background-image: url("images/green.png");
+  position: relative;
+  top:-50px;
+  left:700px;
+  height: 100px;
+  width: 100px;
+
+}
+.planet5{
+  background-image: url("images/glass.png");
+  position:relative;
+  top:-300px;
+  left:1000px;
+  height: 100px;
+  width: 100px;
+
+}
+@keyframes blink{
+50%{
+  opacity:0.0;
+}
 }
 
-@keyframes moving{
-  from{top:-200px;}
-  to{bottom:px;}
+@keyframes spinRight {
+ from {transform: rotate(-360deg);}
+ to {transition: rotate(0deg);}
 }
 
-
-
-@keyframes spin-right {
-  100% {
-   transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-left {
- from {
-  transform: rotate(360deg);
-}
- to {
-  transition: rotate(0deg)
- }
+@keyframes spinLeft {
+ from {transform: rotate(360deg);}
+ to {transition: rotate(360deg);}
 }
