@@ -9,7 +9,7 @@ $('#screen').append(start);
 start.text("START");
 var score = $('<div>', {'id':"score"});
 body.append(score);
-score.text(0);
+
 
 //Creates array of divs with class "rock" + index #.
 
@@ -60,6 +60,7 @@ function countHover(){
 }
 countHover();
 
+
 //------------------------------------------------------------------------------
 //Taken from StackOverFlow / Roko C. Buljan's function to make div stick to mouse.
 function attachMouse(){
@@ -83,7 +84,8 @@ attachMouse();
 body.append(rocks);
 function addEvents(){
 
-function cosa(){
+function values(){
+  counter=0;
 $('#start').on('click', function(){
 
   start.text("Get 200 points!");
@@ -94,12 +96,15 @@ $('#coin').on('click', function(){
 var sum = Number($('#score').text())+ Number($('#coin').text());
   one = score.text(sum);
   $('#coin').remove();
+counter++
+
 });
 
 $('#gem').on('click', function(){
   var sum = Number($('#score').text())+ Number($('#gem').text());
   two=score.text(sum);
   $('#gem').remove();
+
 });
 
 $('#chestGreen').on('click', function(){
@@ -111,7 +116,7 @@ $('#chestGreen').on('click', function(){
 $('#chestRed').on('click', function(){
   var sum = Number($('#score').text())+ Number($('#chestRed').text());
   four=score.text(sum);
-  $('#chestRed').remove();
+$('#chestRed').remove();
 });
 
 $('#chestYellow').on('click', function(){
@@ -121,7 +126,8 @@ $('#chestYellow').on('click', function(){
 
 });
 }
-cosa();
+values();
+
 
 $('.rocks').on('mouseover', function(){
   count++;
