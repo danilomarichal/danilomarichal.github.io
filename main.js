@@ -52,9 +52,10 @@ $('.planet5').append(gem);
 
 var count= 0;
 function countHover(){
-  if (count===3){
+  if (count===5){
     $('#start').text("GAME OVER!!!");
     $('#aircraft').remove();
+    $('.money').remove();
   }
 }
 countHover();
